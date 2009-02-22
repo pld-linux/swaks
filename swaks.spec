@@ -17,7 +17,8 @@ BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-Swiss Army Knife SMTP; Command line SMTP testing, including TLS and AUTH.
+Swiss Army Knife SMTP; Command line SMTP testing, including TLS and
+AUTH.
 
 %description -l pl.UTF-8
 Narzędzie do testowania SMTP, łącznie z TLS i uwierzytelnianiem.
