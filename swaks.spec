@@ -1,5 +1,4 @@
 #
-%include	/usr/lib/rpm/macros.perl
 Summary:	Swiss Army Knife SMTP
 Summary(pl.UTF-8):	Szwajcarski scyzoryk SMTP
 Name:		swaks
