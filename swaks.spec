@@ -1,14 +1,13 @@
-#
 Summary:	Swiss Army Knife SMTP
 Summary(pl.UTF-8):	Szwajcarski scyzoryk SMTP
 Name:		swaks
-Version:	20061116.0
+Version:	20201014.0
 Release:	1
 License:	GPL v2+
 Group:		Applications
-# http://jetmore.org/john/code/swaks
-Source0:	%{name}.pl
-URL:		http://jetmore.org/john/code/#swaks
+Source0:	http://www.jetmore.org/john/code/swaks/files/%{name}-%{version}.tar.gz
+# Source0-md5:	fc4f2bf1df88b38a2392d2e24c52754e
+URL:		http://jetmore.org/john/code/
 BuildRequires:	perl-tools-pod
 BuildRequires:	rpm-perlprov
 Suggests:	perl-perldoc
@@ -23,11 +22,10 @@ AUTH.
 Narzędzie do testowania SMTP, łącznie z TLS i uwierzytelnianiem.
 
 %prep
-%setup -q -c -T
+%setup -q
 
 %build
-pod2man %{SOURCE0} > swaks.1
-pod2text %{SOURCE0} > swaks.txt
+pod2man %{name} > swaks.1
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -41,6 +39,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc swaks.txt
+%doc README.txt doc/*
 %attr(755,root,root) %{_bindir}/%{name}
 %{_mandir}/man1/swaks.1*
